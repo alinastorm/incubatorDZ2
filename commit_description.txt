@@ -15,4 +15,5 @@
 1.0.14 fix: validation
 1.0.15 fix: blogId custom check bloger
 1.0.16 fix: isBasicAuthorization
+1.0.17 fix: blogName mutation Body
 
