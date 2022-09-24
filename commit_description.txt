@@ -14,4 +14,5 @@
 1.0.13 fix: heroku
 1.0.14 fix: validation
 1.0.15 fix: blogId custom check bloger
+1.0.16 fix: isBasicAuthorization
 

@@ -82,11 +82,11 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Get All",
-    "url": "http://127.0.0.1:9001/posts",
+    "url": "http://127.0.0.1:9001/blogs",
     "method": "GET",
     "sortNum": 1875,
     "created": "2022-09-15T13:04:24.807Z",
-    "modified": "2022-09-24T14:32:55.226Z",
+    "modified": "2022-09-24T15:46:41.508Z",
     "headers": [],
     "params": [],
     "auth": {
@@ -110,11 +110,11 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Get BY ID",
-    "url": "http://127.0.0.1:9001/blogs/63189b06003380064c4193be",
+    "url": "http://127.0.0.1:9001/posts/632f22a40641fe61dc5fac85",
     "method": "GET",
     "sortNum": 2187.5,
     "created": "2022-09-15T13:04:24.808Z",
-    "modified": "2022-09-24T15:13:52.829Z",
+    "modified": "2022-09-24T15:45:57.688Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -145,11 +145,11 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Update by id",
-    "url": "http://127.0.0.1:9001/posts/632f1330d2276ed9910ea8d3",
+    "url": "http://127.0.0.1:9001/blogs/632f22a00641fe61dc5fac7d",
     "method": "PUT",
     "sortNum": 50000,
     "created": "2022-09-15T13:04:24.810Z",
-    "modified": "2022-09-24T15:12:25.864Z",
+    "modified": "2022-09-24T15:46:48.094Z",
     "headers": [],
     "params": [],
     "body": {
@@ -182,6 +182,32 @@
       "type": "json",
       "raw": "{\n\"title\":null,\n\"author\":\"valid author\",\n\"availableResolutions\":[\"P144\",\"P240\",\"P720\"],\n\"canBeDownloaded\":\"string\",\n\"minAgeRestriction\":17,\n\"publicationDate\":\"2022-09-17T23:15:53.093Z\"\n}",
       "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "bc79fcca-cfb7-49f2-a913-ddbf92cc40f3",
+    "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
+    "containerId": "",
+    "name": "1",
+    "url": "http://127.0.0.1:9001/posts/632f1330d2276ed9910ea8d3",
+    "method": "PUT",
+    "sortNum": 55000,
+    "created": "2022-09-24T15:40:54.213Z",
+    "modified": "2022-09-24T15:40:54.213Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"valid\",\n  \"content\": \"valid\",\n  \"blogId\": \"63189b06003380064c4193be\",\n  \"shortDescription\": \"length_101-DnZlTI1khUHpqOqCzftIYiSHCV8fKjYFQOoCIwmUczzW9V5K8cqY3aPKo3XKwbfrmeWOJyQgGnlX5sP3aW3RlaRSQx\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "qwerty"
+      }
     },
     "tests": []
   }
