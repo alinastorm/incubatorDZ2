@@ -18,16 +18,16 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Create",
-    "url": "http://127.0.0.1:9001/blogs",
+    "url": "http://127.0.0.1:9001/posts",
     "method": "POST",
     "sortNum": 2500,
     "created": "2022-09-15T13:04:24.804Z",
-    "modified": "2022-09-24T14:16:35.035Z",
+    "modified": "2022-09-24T14:54:53.553Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\"nam\":\"somename\",\"youtubeUrl\":\"invalid-url\"}",
+      "raw": "{\n  \"title\": \"length_31-DrmM8lHeNjSykwSzQ7Her\",\n  \"content\": \"valid\",\n  \"blogId\": \"632f19940538b1a198aba1d1\"\n}",
       "form": []
     },
     "auth": {
