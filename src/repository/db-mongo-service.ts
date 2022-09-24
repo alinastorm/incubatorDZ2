@@ -4,7 +4,7 @@ import { IObject } from '../types/types';
 
 
 // Connection URL
-const url = process.env.mongoURI || 'mongodb://127.0.0.1:27017' || 'строковое подключение к кластеру в атласе'
+const url = 'mongodb+srv://AlexGr:mth0F2JOfBhmJlk4@cluster0.ojk6ayv.mongodb.net/?retryWrites=true&w=majority' || process.env.mongoURI || 'mongodb://127.0.0.1:27017' || 'строковое подключение к кластеру в атласе'
 const clientMongo = new MongoClient(url)
 // Database Name
 const dbName = process.env.mongoDbName || 'learning';
