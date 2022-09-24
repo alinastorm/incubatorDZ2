@@ -6,10 +6,9 @@ import { idValidationMiddleware } from '../middlewares/id-validation-middleware.
 import { blogIdValidationMiddleware } from '../middlewares/blogId-validation-middleware.js';
 import { contentValidationMiddleware } from '../middlewares/content-validation-middleware.js';
 import { shortdescriptionValidationMiddleware } from '../middlewares/shortdescription-validation-middleware.js';
-import { bodyValidationMiddleware } from '../middlewares/body-validation-middleware.js';
-import { bodyPostSanitizeValidationMiddleware } from '../middlewares/bodyPostsSanitize-validation-middleware.js';
-import { bodyBlogSanitizeValidationMiddleware } from '../middlewares/bodyBlogsSanitize-validation-middleware.js';
+import { schemaPostsValidationMiddleware } from '../middlewares/schemaPosts-validation-middleware.js';
 import { authorizationMiddleware } from '../middlewares/authorization-validation-middleware.js';
+import { bodyPostsSanitizeValidationMiddleware } from '../middlewares/bodyPostsSanitize-validation-middleware.js';
 
 const mainRoute = 'posts'
 export default function setRoutes(app: Express) {
@@ -18,8 +17,8 @@ export default function setRoutes(app: Express) {
 
     app.post(`/${mainRoute}`,
         authorizationMiddleware,
-        bodyValidationMiddleware,
-        // bodyPostSanitizeValidationMiddleware,
+        // bodyPostsSanitizeValidationMiddleware,
+        // schemaPostsValidationMiddleware,
         titleValidationMiddleware,
         mainValidationmiddleware,
         postsController.createOne)
@@ -32,7 +31,6 @@ export default function setRoutes(app: Express) {
     app.put(`/${mainRoute}/:id`,
         authorizationMiddleware,
         idValidationMiddleware,
-        bodyValidationMiddleware,
         titleValidationMiddleware,
         shortdescriptionValidationMiddleware,
         contentValidationMiddleware,

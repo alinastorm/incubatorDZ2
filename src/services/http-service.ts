@@ -7,11 +7,11 @@ class HttpService {
     httpServer = express()
     port: number | string = process.env.PORT || 9000
     run() {
+        //midllewares
+        this.httpServer.use(bodyParser.json())
         //routing
         blogsRouting(this.httpServer)
         postsRouting(this.httpServer)
-        //midllewares
-        this.httpServer.use(bodyParser.json())
         //starting server
         this.httpServer.listen(this.port, () => console.log(`http://localhost:${this.port}`))
     }

@@ -4,8 +4,6 @@ import blogsController from "../controllers/blogs-controller.js"
 import { nameValidationMiddleware } from '../middlewares/name-validation-middleware.js';
 import { youtubeUrlValidationMiddleware } from '../middlewares/youtubeUrl-validation-middleware.js';
 import { idValidationMiddleware } from '../middlewares/id-validation-middleware.js';
-import { bodyValidationMiddleware } from '../middlewares/body-validation-middleware.js';
-import { bodyBlogSanitizeValidationMiddleware } from '../middlewares/bodyBlogsSanitize-validation-middleware.js';
 import { authorizationMiddleware } from '../middlewares/authorization-validation-middleware.js';
 
 
@@ -16,8 +14,6 @@ export default function setRoutes(app: Express) {
 
     app.post(`/${mainRoute}`,
         authorizationMiddleware,
-        bodyValidationMiddleware,
-        // bodyBlogSanitizeValidationMiddleware,
         nameValidationMiddleware,
         youtubeUrlValidationMiddleware,
         mainValidationmiddleware,
@@ -30,7 +26,6 @@ export default function setRoutes(app: Express) {
 
     app.put(`/${mainRoute}/:id`,
         authorizationMiddleware,
-        bodyValidationMiddleware,
         idValidationMiddleware,
         nameValidationMiddleware,
         youtubeUrlValidationMiddleware,
