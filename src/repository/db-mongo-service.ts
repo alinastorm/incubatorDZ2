@@ -57,8 +57,7 @@ class DbMongo {
 
     async readOne(collectionName: string, id: string) {
         const collection: Collection<Document> = database.collection(collectionName)
-        const query = { _id: new ObjectId(id) }
-        const result: any = await collection.findOne(query)
+        const result: any = await collection.findOne({ _id: new ObjectId(id) })
         if (!result) return result
         const { _id, ...other } = result
         return { id: _id, ...other }
@@ -76,12 +75,12 @@ class DbMongo {
 
     async updateOne(collectionName: string, id: string, data: any) {
         const collection: Collection<Document> = database.collection(collectionName)
-        const result = collection.updateOne({ id }, { $set: data })
+        const result = collection.updateOne({ _id: new ObjectId(id) }, { $set: data })
         return result
     }
     async replaceOne(collectionName: string, id: string, element: IObject) {
         const collection: Collection<Document> = database.collection(collectionName)
-        const result = collection.replaceOne({ id }, element)
+        const result = collection.replaceOne({ _id: new ObjectId(id) }, element)
         return result
     }
 
