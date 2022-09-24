@@ -22,12 +22,12 @@
     "method": "POST",
     "sortNum": 2500,
     "created": "2022-09-15T13:04:24.804Z",
-    "modified": "2022-09-24T12:49:35.172Z",
+    "modified": "2022-09-24T14:16:35.035Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"new blog\",\n    \"youtubeUrl\": \"https://someurl.com\"\n}",
+      "raw": "{\"nam\":\"somename\",\"youtubeUrl\":\"invalid-url\"}",
       "form": []
     },
     "auth": {

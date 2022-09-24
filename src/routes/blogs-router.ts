@@ -15,10 +15,12 @@ export default function setRoutes(app: Express) {
 
     app.post(`/${mainRoute}`,
         authorizationMiddleware,
-        oneOf([
-            nameValidationMiddleware,
-            youtubeUrlValidationMiddleware,
-        ]),
+        nameValidationMiddleware,
+        youtubeUrlValidationMiddleware,
+        // oneOf([
+        //     nameValidationMiddleware,
+        //     youtubeUrlValidationMiddleware,
+        // ]),
 
         mainValidationmiddleware,
         blogsController.createOne)
