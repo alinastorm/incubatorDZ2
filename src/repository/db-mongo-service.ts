@@ -2,7 +2,6 @@ import { Collection, MongoClient, Document, ObjectId } from 'mongodb'
 import { IObject } from '../types/types';
 
 
-
 // Connection URL
 const url = 'mongodb+srv://AlexGr:mth0F2JOfBhmJlk4@cluster0.ojk6ayv.mongodb.net/?retryWrites=true&w=majority' || process.env.mongoURI || 'mongodb://127.0.0.1:27017' || 'строковое подключение к кластеру в атласе'
 const clientMongo = new MongoClient(url)
@@ -29,6 +28,20 @@ class DbMongo {
             await clientMongo.close()
         }
     }
+    // async readAll(collectionName: string, title?: string) {
+    //     const collection: Collection<Document> = database.collection(collectionName)
+    //     return title ?
+    //         await collection.find({ $regex: title }).toArray() :
+    //         await collection.find().toArray()
+    // }
+
+    // async readOne(collectionName: string, id: string) {
+    //     const collection: Collection<Document> = database.collection(collectionName)
+    //     const query = { _id: id }
+    //     const result: any = await collection.findOne(query)
+    //     return result
+    // }
+
     async readAll(collectionName: string, title?: string) {
         const collection: Collection<Document> = database.collection(collectionName)
         return title ?
@@ -44,17 +57,21 @@ class DbMongo {
 
     async readOne(collectionName: string, id: string) {
         const collection: Collection<Document> = database.collection(collectionName)
-        const query = { "_id": new ObjectId(id) }
+        const query = { _id: new ObjectId(id) }
         const result: any = await collection.findOne(query)
         if (!result) return result
         const { _id, ...other } = result
         return { id: _id, ...other }
     }
 
+
     async createOne(collectionName: string, element: Document) {
         const collection: Collection<Document> = database.collection(collectionName)
-        const result = await collection.insertOne(element)
-        return result.acknowledged
+        // const id = uuidv4()
+        // element.id = id
+        const result = (await collection.insertOne(element)).insertedId
+        // if (result) return id
+        return result
     }
 
     async updateOne(collectionName: string, id: string, data: any) {

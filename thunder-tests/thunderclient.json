@@ -18,16 +18,16 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Create",
-    "url": "http://127.0.0.1:9001/posts",
+    "url": "http://127.0.0.1:9001/blogs",
     "method": "POST",
     "sortNum": 2500,
     "created": "2022-09-15T13:04:24.804Z",
-    "modified": "2022-09-24T11:30:34.121Z",
+    "modified": "2022-09-24T12:49:35.172Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"title\": \"stringa\",\n  \"shortDescription\": \"string\",\n  \"content\": \"string\",\n  \"blogId\": \"string\",\n  \"asda\":\"asdas\"\n}",
+      "raw": "{\n  \"name\": \"new blog\",\n    \"youtubeUrl\": \"https://someurl.com\"\n}",
       "form": []
     },
     "auth": {
@@ -110,11 +110,11 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Get BY ID",
-    "url": "http://127.0.0.1:9001/blogs/632ef729489be9f1be8556f1",
+    "url": "http://127.0.0.1:9001/blogs/632f08996ea8d7934d1168a0",
     "method": "GET",
     "sortNum": 2187.5,
     "created": "2022-09-15T13:04:24.808Z",
-    "modified": "2022-09-24T12:27:27.170Z",
+    "modified": "2022-09-24T13:39:48.074Z",
     "headers": [],
     "params": [],
     "tests": []

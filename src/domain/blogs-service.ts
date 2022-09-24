@@ -12,9 +12,9 @@ class Service {
         const result = await dataService.readAll(collection)
         return result
     }
-    async createOne(body: BlogInputModel) {
-        const result = await dataService.createOne(collection, body)
-        return await dataService.readOne(collection, result.id)
+    async createOne(element: BlogInputModel) {   
+        const id = await dataService.createOne(collection, element)
+        return await dataService.readOne(collection, id)
     }
     async readOne(id: string) {
         const result = await dataService.readOne(collection, id)
