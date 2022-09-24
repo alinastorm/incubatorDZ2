@@ -110,11 +110,11 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Get BY ID",
-    "url": "http://127.0.0.1:9001/blogs/632f08996ea8d7934d1168a0",
+    "url": "http://127.0.0.1:9001/blogs/632f096d5bf0504577c2fcf3",
     "method": "GET",
     "sortNum": 2187.5,
     "created": "2022-09-15T13:04:24.808Z",
-    "modified": "2022-09-24T13:39:48.074Z",
+    "modified": "2022-09-24T13:48:19.871Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -138,17 +138,24 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Update by id",
-    "url": "http://127.0.0.1:9001/videos/1663874395519",
+    "url": "http://127.0.0.1:9001/blogs/632f096e5bf0504577c2fcf6",
     "method": "PUT",
     "sortNum": 50000,
     "created": "2022-09-15T13:04:24.810Z",
-    "modified": "2022-09-22T19:56:21.142Z",
+    "modified": "2022-09-24T13:47:00.888Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n\"title\":\"some title222\",\n\"author\":\"some author222\",\n\"availableResolutions\":[\"P240\"]\n}",
+      "raw": "{\"name\":\"new name\",\"youtubeUrl\":\"https://someurl.com\"}",
       "form": []
+    },
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "qwerty"
+      }
     },
     "tests": []
   },

@@ -5,6 +5,7 @@ import { nameValidationMiddleware } from '../middlewares/name-validation-middlew
 import { youtubeUrlValidationMiddleware } from '../middlewares/youtubeUrl-validation-middleware.js';
 import { idValidationMiddleware } from '../middlewares/id-validation-middleware.js';
 import { authorizationMiddleware } from '../middlewares/authorization-validation-middleware.js';
+import { oneOf } from 'express-validator';
 
 
 const mainRoute = 'blogs'
@@ -14,14 +15,17 @@ export default function setRoutes(app: Express) {
 
     app.post(`/${mainRoute}`,
         authorizationMiddleware,
-        nameValidationMiddleware,
-        youtubeUrlValidationMiddleware,
+        oneOf([
+            nameValidationMiddleware,
+            youtubeUrlValidationMiddleware,
+        ]),
+
         mainValidationmiddleware,
         blogsController.createOne)
 
     app.get(`/${mainRoute}/:id`,
-        // idValidationMiddleware,
-        // mainValidationmiddleware,
+        idValidationMiddleware,
+        mainValidationmiddleware,
         blogsController.readOne)
 
     app.put(`/${mainRoute}/:id`,
