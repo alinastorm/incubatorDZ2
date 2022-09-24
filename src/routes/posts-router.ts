@@ -3,7 +3,7 @@ import { mainValidationmiddleware } from '../middlewares/main-validation-middlew
 import postsController from "../controllers/posts-controller.js"
 import { titleValidationMiddleware } from '../middlewares/title-validation-middleware.js';
 import { idValidationMiddleware } from '../middlewares/id-validation-middleware.js';
-import { blogIdValidationMiddleware } from '../middlewares/blogId-validation-middleware.js';
+import { postIdValidationMiddleware } from '../middlewares/postId-validation-middleware.js';
 import { contentValidationMiddleware } from '../middlewares/content-validation-middleware.js';
 import { shortdescriptionValidationMiddleware } from '../middlewares/shortdescription-validation-middleware.js';
 import { schemaPostsValidationMiddleware } from '../middlewares/schemaPosts-validation-middleware.js';
@@ -34,7 +34,7 @@ export default function setRoutes(app: Express) {
         titleValidationMiddleware,
         shortdescriptionValidationMiddleware,
         contentValidationMiddleware,
-        blogIdValidationMiddleware,
+        postIdValidationMiddleware,
         mainValidationmiddleware,
         postsController.updateOne)
 
