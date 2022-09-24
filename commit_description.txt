@@ -10,3 +10,4 @@
 1.0.9 fix: delete mongo id 
 1.0.10 fix: oneOf 
 1.0.11 fix: mongo update id to _id 
+1.0.12 fix: blogIdValidationMiddleware 

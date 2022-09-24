@@ -1,8 +1,14 @@
-import { param } from 'express-validator';
+import { body } from 'express-validator';
 
 
-export const blogIdValidationMiddleware = param('blogId')
+export const blogIdValidationMiddleware = body('blogId')
     .exists()
     .isString()
-    // .withMessage({ message: 'wrong blogId', field: "blogId", code: 400 })
+// .custom((value, { req }) => {
+//     console.log('value:', value);
+
+//     return true
+// })
+
+// .withMessage({ message: 'wrong blogId', field: "blogId", code: 400 })
 
