@@ -8,17 +8,10 @@
     "method": "DELETE",
     "sortNum": 1250,
     "created": "2022-09-15T13:04:24.802Z",
-    "modified": "2022-09-15T13:05:31.587Z",
+    "modified": "2022-09-24T12:05:39.351Z",
     "headers": [],
     "params": [],
-    "tests": [
-      {
-        "type": "res-code",
-        "custom": "",
-        "action": "equal",
-        "value": "205"
-      }
-    ]
+    "tests": []
   },
   {
     "_id": "8a5eab03-16d7-4ab9-98e2-effafc8a8514",

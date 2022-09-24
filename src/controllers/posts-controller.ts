@@ -52,6 +52,7 @@ class Controller {
         return res.sendStatus(204)
     }
     async deleteAll(req: Request, res: Response) {
+     console.log('deleteAll posts')
         await postsService.deleteAll()
         res.status(204).send(JSON.stringify('All data is deleted'))
     }

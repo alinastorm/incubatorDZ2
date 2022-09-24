@@ -34,6 +34,8 @@ class Service {
     }
     async deleteAll() {
         const result = await dataService.deleteAll(collection)
+        console.log('posts result:', result)
+
         return result
     }
 }

@@ -1,4 +1,4 @@
-import { BlogInputModel} from '../types/types.js';
+import { BlogInputModel } from '../types/types.js';
 import DataService from '../services/data-service.js';
 import dbMongoService from '../repository/db-mongo-service.js';
 
@@ -34,6 +34,7 @@ class Service {
     }
     async deleteAll() {
         const result = await dataService.deleteAll(collection)
+        console.log('blogs result:', result)
         return result
     }
 }
