@@ -32,15 +32,22 @@ class DbMongo {
     async readAll(collectionName: string, title?: string) {
         const collection: Collection<Document> = database.collection(collectionName)
         return title ?
-            await collection.find({ $regex: title }).toArray() :
-            await collection.find().toArray()
+            (await collection.find({ $regex: title }).toArray()).map((elem) => {
+                const { _id, ...other } = elem
+                return { id: _id, ...other }
+            }) :
+            (await collection.find().toArray()).map((elem) => {
+                const { _id, ...other } = elem
+                return { id: _id, ...other }
+            })
     }
 
     async readOne(collectionName: string, id: string) {
         const collection: Collection<Document> = database.collection(collectionName)
         const query = { id };
-        const result = await collection.findOne(query)
-        return result
+        const result: any = await collection.findOne(query)
+        const { _id, ...other } = result
+        return { id: _id, ...other }
     }
 
     async createOne(collectionName: string, element: Document) {
