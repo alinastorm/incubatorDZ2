@@ -110,11 +110,11 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Get BY ID",
-    "url": "http://127.0.0.1:9001/blogs/632f096d5bf0504577c2fcf3",
+    "url": "http://127.0.0.1:9001/blogs/632f0c7350ebde3574446c47",
     "method": "GET",
     "sortNum": 2187.5,
     "created": "2022-09-15T13:04:24.808Z",
-    "modified": "2022-09-24T13:48:19.871Z",
+    "modified": "2022-09-24T14:00:28.055Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -124,13 +124,20 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "DELETE BY ID",
-    "url": "http://127.0.0.1:9001/videos/1663874332080",
+    "url": "http://127.0.0.1:9001/blogs/632f0c7350ebde3574446c47",
     "method": "DELETE",
     "sortNum": 40000,
     "created": "2022-09-15T13:04:24.809Z",
-    "modified": "2022-09-22T19:22:43.144Z",
+    "modified": "2022-09-24T13:58:09.559Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "qwerty"
+      }
+    },
     "tests": []
   },
   {

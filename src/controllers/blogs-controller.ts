@@ -50,8 +50,8 @@ class Controller {
         if (!result) {
             return res.status(404).send('Not Found')
         }
-        await blogsService.deleteOne(id)
-        return res.sendStatus(204)
+        if (await blogsService.deleteOne(id)) return res.sendStatus(204)
+        return res.sendStatus(500)
     }
     async deleteAll(req: Request, res: Response) {
         console.log('deleteAll blogs')

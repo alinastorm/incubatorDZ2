@@ -87,7 +87,7 @@ class DbMongo {
 
     async deleteOne(collectionName: string, id: string) {
         const collection: Collection<Document> = database.collection(collectionName)
-        const result = await collection.deleteOne({ id })
+        const result = await collection.deleteOne({ _id: new ObjectId(id) })
         return result.deletedCount === 1
     }
 
