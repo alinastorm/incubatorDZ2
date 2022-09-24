@@ -1,4 +1,4 @@
-import { Collection, MongoClient, Document } from 'mongodb'
+import { Collection, MongoClient, Document, ObjectId } from 'mongodb'
 import { IObject } from '../types/types';
 
 
@@ -44,8 +44,9 @@ class DbMongo {
 
     async readOne(collectionName: string, id: string) {
         const collection: Collection<Document> = database.collection(collectionName)
-        const query = { id };
+        const query = { "_id": new ObjectId(id) }
         const result: any = await collection.findOne(query)
+        if (!result) return result
         const { _id, ...other } = result
         return { id: _id, ...other }
     }

@@ -3,4 +3,5 @@
 1.0.2 feat: mongoDb atlas link 
 1.0.3 refactor
 1.0.4 refactor: testing controller
-1.0.5 fix: mongo _id to id 
+1.0.5 fix: return mongo _id to id 
+1.0.6 fix: input mongo _id to id 

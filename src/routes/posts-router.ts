@@ -23,7 +23,7 @@ export default function setRoutes(app: Express) {
         mainValidationmiddleware,
         postsController.createOne)
 
-    app.get(`/${mainRoute}:id`,
+    app.get(`/${mainRoute}/:id`,
         idValidationMiddleware,
         mainValidationmiddleware,
         postsController.readOne)

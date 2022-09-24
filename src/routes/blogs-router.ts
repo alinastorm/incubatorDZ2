@@ -19,9 +19,9 @@ export default function setRoutes(app: Express) {
         mainValidationmiddleware,
         blogsController.createOne)
 
-    app.get(`/${mainRoute}:id`,
-        idValidationMiddleware,
-        mainValidationmiddleware,
+    app.get(`/${mainRoute}/:id`,
+        // idValidationMiddleware,
+        // mainValidationmiddleware,
         blogsController.readOne)
 
     app.put(`/${mainRoute}/:id`,
