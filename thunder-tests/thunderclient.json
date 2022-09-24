@@ -110,11 +110,11 @@
     "colId": "1574f710-2e42-4f13-a85a-9ca544736867",
     "containerId": "",
     "name": "Get BY ID",
-    "url": "http://127.0.0.1:9001/blogs/632f1331d2276ed9910ea8d9",
+    "url": "http://127.0.0.1:9001/blogs/63189b06003380064c4193be",
     "method": "GET",
     "sortNum": 2187.5,
     "created": "2022-09-15T13:04:24.808Z",
-    "modified": "2022-09-24T14:29:41.466Z",
+    "modified": "2022-09-24T15:13:52.829Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -149,12 +149,12 @@
     "method": "PUT",
     "sortNum": 50000,
     "created": "2022-09-15T13:04:24.810Z",
-    "modified": "2022-09-24T14:33:11.643Z",
+    "modified": "2022-09-24T15:12:25.864Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"content\": \"content after update\",\n  \"shortDescription\": \"shortDescription after update\",\n  \"title\": \"title updated\",\n  \"blogId\": \"632f1331d2276ed9910ea8d8\"\n}",
+      "raw": "{\n  \"title\": \"valid\",\n  \"content\": \"valid\",\n  \"blogId\": \"63189b06003380064c4193be\",\n  \"shortDescription\": \"length_101-DnZlTI1khUHpqOqCzftIYiSHCV8fKjYFQOoCIwmUczzW9V5K8cqY3aPKo3XKwbfrmeWOJyQgGnlX5sP3aW3RlaRSQx\"\n}",
       "form": []
     },
     "auth": {

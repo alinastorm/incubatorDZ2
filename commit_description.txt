@@ -12,4 +12,6 @@
 1.0.11 fix: mongo update id to _id 
 1.0.12 fix: postIdValidationMiddleware 
 1.0.13 fix: heroku
+1.0.14 fix: validation
+1.0.15 fix: blogId custom check bloger
 
